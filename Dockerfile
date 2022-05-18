@@ -4,9 +4,12 @@ WORKDIR /usr/src/app
 
 ENV NODE_ENV=production
 
-COPY package.json ./
+COPY package*.json ./
+COPY yarn.lock ./
 
-RUN npm ci --only=production
+RUN npm i -g yarn
+
+RUN yarn install --frozen-lockfile --production
 
 COPY ./build/ .
 
