@@ -13,7 +13,7 @@ app.use(express.static("./assets"));
 
 // 使用body解析中间件
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // 使用自定义中间件
 app.use(logger);
