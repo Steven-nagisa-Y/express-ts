@@ -9,7 +9,7 @@ COPY yarn.lock ./
 
 RUN yarn install --frozen-lockfile --production
 
-COPY ./build/ .
+COPY ./build/ ./
 
 EXPOSE 3000
 
