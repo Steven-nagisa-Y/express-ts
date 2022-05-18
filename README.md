@@ -1,10 +1,14 @@
-# WebHook Server
+# Express HTTP Server
 
 框架使用 Express
 
 使用 TypeScript 的新尝试
 
 造轮子就完了
+
+## 功能
+
+- webhook: /webhook
 
 ## 安装
 
