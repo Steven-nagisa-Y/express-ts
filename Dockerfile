@@ -2,11 +2,11 @@ FROM node:16-alpine
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
-COPY tsconfig.json ./
+ENV NODE_ENV=production
 
-RUN npm i
-RUN npm run build
+COPY package.json ./
+
+RUN npm ci --only=production
 
 COPY ./build/ .
 
